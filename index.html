@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#050505">
+    <meta name="description" content="TAKO — The Origin Of Shiba Inu Legacy. Before Doge. Before the memes. There was TAKO.">
+    <meta name="keywords" content="TAKO, Shiba Inu, Ethereum, ERC-20, meme coin, origin">
+    <title>TAKO — The Origin Of Shiba Inu Legacy</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+    <div class="nav-container">
+        <a href="#home" class="brand" aria-label="TAKO Home">
+            <img src="https://i.ibb.co/5XRVSBW1/IMG-20261003-WA0009.jpg" alt="TAKO Logo" width="42" height="42">
+            <span>TAKO</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Main navigation">
+            <a href="#story">Story</a>
+            <a href="#tokenomics">Tokenomics</a>
+            <a href="#buy">How To Buy</a>
+            <a href="#community">Community</a>
+        </nav>
+
+        <a href="https://app.uniswap.org/swap?outputCurrency=0x0ee375090f423934ebfbb241a3eb2ee4e01eaf0a"
+           target="_blank" rel="noopener noreferrer" class="nav-buy">
+            BUY TAKO
+        </a>
+
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+            ☰
+        </button>
+    </div>
+</header>
+
+<!-- ================= MOBILE MENU ================= -->
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile menu">
+    <a href="#story">Story</a>
+    <a href="#tokenomics">Tokenomics</a>
+    <a href="#buy">How To Buy</a>
+    <a href="#community">Community</a>
+    <a href="https://app.uniswap.org/swap?outputCurrency=0x0ee375090f423934ebfbb241a3eb2ee4e01eaf0a"
+       target="_blank" rel="noopener noreferrer" class="mobile-buy">
+        BUY TAKO
+    </a>
+</div>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+    <div class="hero-glow glow-one"></div>
+    <div class="hero-glow glow-two"></div>
+
+    <div class="hero-content">
+        <div class="hero-label">
+            <span class="pulse" aria-hidden="true"></span>
+            ETHEREUM • ERC-20
+        </div>
+
+        <h1>
+            THE ORIGIN
+            <span>OF SHIBA</span>
+            <strong>INU LEGACY</strong>
+        </h1>
+
+        <p class="hero-description">
+            Before Doge.<br>
+            Before the memes.<br>
+            Before the internet knew the Shiba.
+            <br><br>
+            There was <b>TAKO.</b>
+        </p>
+
+        <div class="hero-buttons">
+            <a href="https://app.uniswap.org/swap?outputCurrency=0x0ee375090f423934ebfbb241a3eb2ee4e01eaf0a"
+               target="_blank" rel="noopener noreferrer" class="primary-btn">
+                BUY TAKO <span aria-hidden="true">↗</span>
+            </a>
+            <a href="#story" class="secondary-btn">DISCOVER THE STORY</a>
+        </div>
+
+        <div class="contract-box">
+            <div>
+                <small>TAKO CONTRACT</small>
+                <code id="contract">0x0ee375090f423934ebfbb241a3eb2ee4e01eaf0a</code>
+            </div>
+            <button id="copyContract" type="button" aria-label="Copy contract address">COPY</button>
+        </div>
+    </div>
+
+    <div class="hero-art">
+        <div class="coin-ring" aria-hidden="true"></div>
+        <div class="art-shadow" aria-hidden="true"></div>
+        <img src="https://i.ibb.co/5XRVSBW1/IMG-20261003-WA0009.jpg"
+             alt="TAKO Shiba Inu" class="tako-image" width="480" height="480">
+
+        <div class="floating-badge badge-one">
+            <span>0%</span>
+            TAX
+        </div>
+        <div class="floating-badge badge-two">
+            <span>420.69B</span>
+            SUPPLY
+        </div>
+    </div>
+</section>
+
+<!-- ================= TICKER ================= -->
+<div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+        <span>$TAKO</span>
+        <span>THE ORIGIN</span>
+        <span>SHIBA INU LEGACY</span>
+        <span>ETHEREUM</span>
+        <span>0% TAX</span>
+        <span>RENOUNCED</span>
+        <span>$TAKO</span>
+        <span>THE ORIGIN</span>
+        <span>SHIBA INU LEGACY</span>
+        <span>ETHEREUM</span>
+        <span>0% TAX</span>
+        <span>RENOUNCED</span>
+    </div>
+</div>
+
+<!-- ================= STATS ================= -->
+<section class="stats-section">
+    <div class="section-container">
+        <div class="section-heading center">
+            <span class="eyebrow">LIVE MARKET</span>
+            <h2>TAKO BY THE NUMBERS</h2>
+            <p>Market information updates automatically every 60 seconds.</p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <span>PRICE</span>
+                <strong id="price">Loading...</strong>
+                <small>USD</small>
+            </div>
+            <div class="stat-card">
+                <span>MARKET CAP</span>
+                <strong id="marketCap">Loading...</strong>
+                <small>USD</small>
+            </div>
+            <div class="stat-card">
+                <span>LIQUIDITY</span>
+                <strong id="liquidity">Loading...</strong>
+                <small>USD</small>
+            </div>
+            <div class="stat-card">
+                <span>24H VOLUME</span>
+                <strong id="volume">Loading...</strong>
+                <small>USD</small>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= STORY ================= -->
+<section class="story section" id="story">
+    <div class="section-container story-grid">
+        <div class="story-image">
+            <div class="image-frame">
+                <img src="https://i.ibb.co/5XRVSBW1/IMG-20261003-WA0009.jpg" alt="TAKO" width="500" height="500">
+            </div>
+            <div class="vertical-text">TAKO • 1932 • ORIGIN</div>
+        </div>
+
+        <div class="story-content">
+            <span class="eyebrow">THE BEGINNING</span>
+            <h2>BEFORE THE MEMES, <span>THERE WAS TAKO.</span></h2>
+            <p>Long before Kabosu became an internet icon, the story of the Shiba Inu had already begun.</p>
+            <p>In 1932, a red Shiba named Tako became the first of the breed officially registered by NIPPO — setting the foundation for one of Japan’s most iconic native dogs.</p>
+            <p>TAKO represents that origin story — a tribute to the history, character and spirit that came before the meme era. Now that story lives on-chain.</p>
+
+            <div class="story-highlight">
+                <strong>TAKO</strong>
+                <span>THE ORIGIN OF SHIBA INU LEGACY</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= TOKENOMICS ================= -->
+<section class="tokenomics section" id="tokenomics">
+    <div class="section-container">
+        <div class="section-heading center">
+            <span class="eyebrow">TOKENOMICS</span>
+            <h2>SIMPLE. TRANSPARENT. TAKO.</h2>
+            <p>Fair launch. No team allocation. Ownership renounced.</p>
+        </div>
+
+        <div class="token-grid">
+            <div class="supply-card">
+                <div class="supply-circle">
+                    <span>TOTAL SUPPLY</span>
+                    <strong>420.69B</strong>
+                </div>
+                <h3>420,690,000,000 TAKO</h3>
+                <p>Fixed supply • 100% circulating</p>
+            </div>
+
+            <div class="token-details">
+                <div class="token-row">
+                    <div class="token-icon">◎</div>
+                    <div>
+                        <span>NETWORK</span>
+                        <strong>Ethereum (ERC-20)</strong>
+                    </div>
+                </div>
+                <div class="token-row">
+                    <div class="token-icon">%</div>
+                    <div>
+                        <span>BUY / SELL TAX</span>
+                        <strong>0% / 0%</strong>
+                    </div>
+                </div>
+                <div class="token-row">
+                    <div class="token-icon">◈</div>
+                    <div>
+                        <span>OWNERSHIP</span>
+                        <strong>Renounced</strong>
+                    </div>
+                </div>
+                <div class="token-row">
+                    <div class="token-icon">#</div>
+                    <div>
+                        <span>CONTRACT</span>
+                        <strong>0x0ee3...eAF0a</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tokenomics-extra">
+            <h3 class="tokenomics-subtitle">Distribution</h3>
+            <div class="distribution-grid">
+                <div class="dist-card">
+                    <div class="dist-percent">100%</div>
+                    <h4>Circulating Supply</h4>
+                    <p>All tokens are in circulation. No locked team or investor allocations.</p>
+                </div>
+                <div class="dist-card">
+                    <div class="dist-percent">0%</div>
+                    <h4>Team Allocation</h4>
+                    <p>No team tokens. Ownership of the contract has been renounced.</p>
+                </div>
+                <div class="dist-card">
+                    <div class="dist-percent">0%</div>
+                    <h4>Tax / Fees</h4>
+                    <p>Standard ERC-20. Zero buy tax. Zero sell tax. No hidden fees.</p>
+                </div>
+                <div class="dist-card">
+                    <div class="dist-percent">LP</div>
+                    <h4>Liquidity</h4>
+                    <p>Traded on Uniswap V2 (TAKO/WETH). Verify the pair on Etherscan or DexScreener.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="token-facts">
+            <div class="fact">
+                <span>Max Supply</span>
+                <strong>420.69B</strong>
+            </div>
+            <div class="fact">
+                <span>Circulating</span>
+                <strong>420.69B</strong>
+            </div>
+            <div class="fact">
+                <span>Decimals</span>
+                <strong>18</strong>
+            </div>
+            <div class="fact">
+                <span>Launch</span>
+                <strong>Jul 2025</strong>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= LEGACY ================= -->
+<section class="legacy section">
+    <div class="section-container">
+        <div class="section-heading">
+            <span class="eyebrow">THE LEGACY</span>
+            <h2>FROM ORIGIN<br>TO CULTURE.</h2>
+        </div>
+
+        <div class="legacy-timeline">
+            <div class="timeline-item">
+                <div class="timeline-number">01</div>
+                <div>
+                    <h3>THE ORIGIN</h3>
+                    <p>1932 — Tako becomes the first Shiba Inu officially registered by NIPPO, laying the foundation for the breed.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-number">02</div>
+                <div>
+                    <h3>THE MEME ERA</h3>
+                    <p>Shiba Inu culture transforms into one of the biggest internet phenomena with Doge and Kabosu.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-number">03</div>
+                <div>
+                    <h3>ON-CHAIN</h3>
+                    <p>TAKO brings the original origin story onto Ethereum as a pure community token.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-number">04</div>
+                <div>
+                    <h3>THE LEGACY CONTINUES</h3>
+                    <p>The community carries the story forward — before the memes, there was TAKO.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ================= BUY ================= -->
+<section class="buy-section section" id="buy">
+    <div class="section-container buy-content">
+        <span class="eyebrow">JOIN THE LEGACY</span>
+        <h2>READY TO MEET <span>TAKO?</span></h2>
+        <p>Get TAKO on Ethereum through Uniswap. Always verify the contract.</p>
+
+        <div class="buy-steps">
+            <div class="buy-step">
+                <span>01</span>
+                <h3>GET ETH</h3>
+                <p>Make sure your wallet contains Ethereum for the swap and gas fees.</p>
+            </div>
+            <div class="buy-step">
+                <span>02</span>
+                <h3>OPEN UNISWAP</h3>
+                <p>Connect any Ethereum-compatible wallet (MetaMask, Rabby, WalletConnect, etc.).</p>
+            </div>
+            <div class="buy-step">
+                <span>03</span>
+                <h3>SWAP FOR TAKO</h3>
+                <p>Paste the official contract address and complete your swap safely.</p>
+            </div>
+        </div>
+
+        <a href="https://app.uniswap.org/swap?outputCurrency=0x0ee375090f423934ebfbb241a3eb2ee4e01eaf0a"
+           target="_blank" rel="noopener noreferrer" class="primary-btn large-btn">
+            BUY TAKO ON UNISWAP ↗
+        </a>
+    </div>
+</section>
+
+<!-- ================= TRANSPARENCY ================= -->
+<section class="transparency section">
+    <div class="section-container">
+        <div class="section-heading center">
+            <span class="eyebrow">TRANSPARENCY</span>
+            <h2>VERIFY IT YOURSELF.</h2>
+            <p>Everything starts with the contract. Never trust screenshots.</p>
+        </div>
+
+        <div class="verify-grid">
+            <a href="https://etherscan.io/token/0x0ee375090f423934ebfbb241a3eb2ee4e01eaf0a"
+               target="_blank" rel="noopener noreferrer" class="verify-card">
+                <span>ETHERSCAN</span>
+                <strong>VIEW CONTRACT ↗</strong>
+            </a>
+            <a href="https://app.uniswap.org/swap?outputCurrency=0x0ee375090f423934ebfbb241a3eb2ee4e01eaf0a"
+               target="_blank" rel="noopener noreferrer" class="verify-card">
+                <span>UNISWAP</span>
+                <strong>TRADE TAKO ↗</strong>
+            </a>
+            <a href="https://dexscreener.com/ethereum/0x0ee375090f423934ebfbb241a3eb2ee4e01eaf0a"
+               target="_blank" rel="noopener noreferrer" class="verify-card">
+                <span>DEXSCREENER</span>
+                <strong>VIEW CHART ↗</strong>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ================= COMMUNITY ================= -->
+<section class="community section" id="community">
+    <div class="community-card">
+        <div class="community-logo">
+            <img src="https://i.ibb.co/5XRVSBW1/IMG-20261003-WA0009.jpg" alt="TAKO" width="90" height="90">
+        </div>
+        <span class="eyebrow">THE PACK</span>
+        <h2>THE LEGACY<br>NEEDS YOU.</h2>
+        <p>Follow TAKO. Join the community. Be part of the origin story.</p>
+
+        <div class="social-buttons">
+            <a href="https://x.com/takocoineth" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">𝕏</a>
+            <a href="https://t.me/takocoineth" target="_blank" rel="noopener noreferrer" aria-label="Telegram">TG</a>
+        </div>
+    </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="faq section">
+    <div class="section-container">
+        <div class="section-heading center">
+            <span class="eyebrow">FAQ</span>
+            <h2>QUESTIONS?</h2>
+        </div>
+
+        <div class="faq-container">
+            <details>
+                <summary>What is TAKO? <span>+</span></summary>
+                <p>TAKO is an Ethereum-based meme token built around the true origin story of the Shiba Inu — the first dog of the breed registered by NIPPO in 1932.</p>
+            </details>
+            <details>
+                <summary>What is the official contract? <span>+</span></summary>
+                <p>0x0ee375090f423934ebfbb241a3eb2ee4e01eaf0a — always verify on Etherscan before trading.</p>
+            </details>
+            <details>
+                <summary>What is the total supply? <span>+</span></summary>
+                <p>420,690,000,000 TAKO. The entire supply is circulating.</p>
+            </details>
+            <details>
+                <summary>Is there a tax? <span>+</span></summary>
+                <p>No. 0% buy tax and 0% sell tax. Standard ERC-20.</p>
+            </details>
+            <details>
+                <summary>Is ownership renounced? <span>+</span></summary>
+                <p>Yes. Contract ownership is renounced (owner = zero address).</p>
+            </details>
+            <details>
+                <summary>Where can I buy TAKO? <span>+</span></summary>
+                <p>On Uniswap (Ethereum). Always double-check the contract address before swapping.</p>
+            </details>
+        </div>
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-brand">
+            <img src="https://i.ibb.co/5XRVSBW1/IMG-20261003-WA0009.jpg" alt="TAKO" width="55" height="55">
+            <div>
+                <strong>TAKO</strong>
+                <span>THE ORIGIN OF SHIBA INU LEGACY</span>
+            </div>
+        </div>
+
+        <div class="footer-contract">
+            <span>CONTRACT</span>
+            <code>0x0ee375090f423934ebfbb241a3eb2ee4e01eaf0a</code>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 TAKO. All rights reserved.</p>
+            <p>Crypto assets are volatile. Do your own research. Not financial advice.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
